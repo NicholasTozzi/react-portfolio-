@@ -1,6 +1,6 @@
 import React from "react";
 //TODO: Edit Footer Template
-export default function nav() {
+export default function Footer() {
   return (
     <div class="container">
       <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
