@@ -1,0 +1,6 @@
+/*TODO flex-grow: 1 is overwriting my nav style*/
+.jc-flex-end {
+  display: flex;
+  justify-content: flex-end;
+  border: 1px solid red;
+}

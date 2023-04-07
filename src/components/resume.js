@@ -15,15 +15,15 @@ function Resume() {
         </a>
         <Carousel.Caption>
           <h3>Social Media API</h3>
-          <img src="/public/github.png" />
+          <img src="/public/github.png" /> //!Image not currently linking
           <p>A backend Social Media API created with mongoDB.</p>
         </Carousel.Caption>
       </Carousel.Item>
       <Carousel.Item>
         <img
           className="d-block w-100"
-          src="holder.js/800x400?text=Second slide&bg=282c34"
-          alt="Second slide"
+          src="https://kinsta.com/wp-content/uploads/2022/05/what-is-mongodb.jpg"
+          alt="Social Media API"
         />
 
         <Carousel.Caption>
@@ -34,8 +34,8 @@ function Resume() {
       <Carousel.Item>
         <img
           className="d-block w-100"
-          src="holder.js/800x400?text=Third slide&bg=20232a"
-          alt="Third slide"
+          src="https://kinsta.com/wp-content/uploads/2022/05/what-is-mongodb.jpg"
+          alt="Social Media API"
         />
 
         <Carousel.Caption>
