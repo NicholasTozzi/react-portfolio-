@@ -1,0 +1,31 @@
+.ProfilePicture {
+  width: 100%;
+  max-width: 350px;
+  height: 100%;
+  float: left;
+}
+
+.icon {
+  width: 50px;
+  height: auto;
+}
+
+.about-pane-right {
+  display: inline-block;
+  width: calc(100% - 500px); /* adjust this value to your needs */
+}
+
+.about-nav-container {
+  width: 100%;
+}
+
+.social-container {
+}
+
+.wahoo {
+  border: 10px solid red;
+}
+.row {
+  border: 10px solid blue;
+ 
+}
