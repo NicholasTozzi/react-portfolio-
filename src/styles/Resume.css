@@ -1,7 +1,31 @@
+@import url("https://fonts.googleapis.com/css2?family=Fira+Code&display=swap");
+
 .portfolio {
-  filter: blur(6px);
+  max-height: 800px;
+  max-width: 100%;
+  filter: blur(10px);
 }
 
 .caption-container {
-   display: flex; 
+  display: flex;
+}
+
+.section {
+  background-color: #44715f;
+}
+
+h1.code {
+  font-size: em;
+}
+
+.code {
+  font-family: "Fira Code", monospace;
+}
+
+p.code {
+  font-size: 2em;
+}
+
+.this:hover {
+  color: #a9fdac;
 }
