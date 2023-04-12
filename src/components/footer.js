@@ -1,9 +1,10 @@
 import React from "react";
+import "../styles/Footer.css";
 //TODO: Edit Footer Template
 export default function Footer() {
   return (
-    <div class="container">
-      <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+    <div class="= footer">
+      <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top footer">
         <div class="col-md-4 d-flex align-items-center">
           <a
             href="/"
@@ -11,7 +12,7 @@ export default function Footer() {
           >
             {/* <svg class="bi" width="30" height="24"><use xlink:href="#bootstrap"></use></svg> */}
           </a>
-          <span class="mb-3 mb-md-0 text-muted">© 2022 Company, Inc</span>
+          <span class="mb-3 mb-md-0 text-muted">© 2023 Company, Inc</span>
         </div>
 
         <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">

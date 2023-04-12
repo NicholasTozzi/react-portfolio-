@@ -1,6 +1,9 @@
 import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Carousel from "react-bootstrap/Carousel";
+import "../styles/Resume.css";
+import PortfolioPiece1 from "../../src/pictures/portfolio-pieces/flick-tracker.png";
+import PortfolioPiece2 from "../../src/pictures/portfolio-pieces/game-wiki.png";
 //TODO: Make nav go to different components of the webpage
 function Resume() {
   return (
@@ -8,14 +11,14 @@ function Resume() {
       <Carousel.Item>
         <a href="https://flick-tracker.herokuapp.com/">
           <img
-            className="d-block w-100"
-            src="https://www.gannett-cdn.com/-mm-/eb34b9888702cb3f4641b6ee49362a859a5dfd45/c=0-0-2309-1299/local/-/media/2020/04/29/USATODAY/usatsports/movie-theater-gettyimages-530640869.jpg?width=2309&height=1299&fit=crop&format=pjpg&auto=webp"
+            className="d-block w-100 portfolio"
+            src={PortfolioPiece1}
             alt="Flick Tracker"
           />
         </a>
-        <Carousel.Caption>
+        <Carousel.Caption className="caption-container">
           <h3>Flick Tracker</h3>
-          <img src="/public/github.png" />
+          <img src="{PortfolioPiece1}" />
           <p>A MERN Movie App to track watched movies and your watchlist</p>
         </Carousel.Caption>
       </Carousel.Item>
@@ -23,8 +26,8 @@ function Resume() {
       <Carousel.Item>
         <a href="https://github.com/NicholasTozzi/e-commerce">
           <img
-            className="d-block w-100"
-            src="https://e0.pxfuel.com/wallpapers/850/829/desktop-wallpaper-e-commerce-web-designing-development-company-e-commerce.jpg"
+            className="d-block w-100 portfolio"
+            src={PortfolioPiece1}
             alt="e-commerce"
           />
         </a>
@@ -38,8 +41,8 @@ function Resume() {
       <Carousel.Item>
         <a href="https://alexbrenes999.github.io/project1/">
           <img
-            className="d-block w-100"
-            src="https://kinsta.com/wp-content/uploads/2022/05/what-is-mongodb.jpg"
+            className="d-block w-100 portfolio"
+            src={PortfolioPiece2}
             alt="Game Wiki"
           />
         </a>

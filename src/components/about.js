@@ -6,17 +6,6 @@ import Row from "react-bootstrap/Row";
 import Button from "react-bootstrap/Button";
 import Modal from "react-bootstrap/Modal";
 import Form from "react-bootstrap/Form";
-// import {
-//   FaHtml5,
-//   FaCss3,
-//   FaJs,
-//   FaNodeJs,
-//   FaReact,
-//   FaNpm,
-// } from "react-icons/fa";
-// import { DiMongodb } from "react-icons/di";
-// import { GrMysql } from "react-icons/gr";
-// import { SiGraphql } from "react-icons/si";
 import { FaGithub } from "react-icons/fa";
 import { FaLinkedin } from "react-icons/fa";
 import { FaTwitter } from "react-icons/fa";
@@ -43,12 +32,7 @@ function About() {
       </Col>
 
       <Col sm={7} className="right-col">
-        <h1
-          className=" about-pane-right code
-          "
-        >
-          Hey, I'm {name}
-        </h1>
+        <h1 className="about-pane-right code">Hey, I'm {name}</h1>
         <p className="code">
           Hi there! I'm a passionate developer who loves coding, logic, and
           exploring the exciting world of blockchain technologies.
@@ -64,22 +48,12 @@ function About() {
           not afraid to step outside their comfort zone, then look no further.
           Let's work together to create something truly amazing!
         </p>
-
-        <Button className="modal-button" onClick={() => setShowModal(true)}>
+        <Button
+          className="modal-button hire-button code"
+          onClick={() => setShowModal(true)}
+        >
           Hire Me
         </Button>
-
-        {/* <div className="tech-container">
-          <FaHtml5 className="tech" />
-          <FaCss3 className="tech" />
-          <FaJs className="tech" />
-          <FaNodeJs className="tech" />
-          <FaReact className="tech" />
-          <FaNpm className="tech" />
-          <DiMongodb className="tech" />
-          <GrMysql className="tech" />
-          <SiGraphql className="tech" />
-        </div> */}
         <div className="social-container">
           <a href="https://twitter.com/SeitanETH">
             <FaTwitter className="icon" />
@@ -91,18 +65,23 @@ function About() {
             <FaGithub className="icon" />
           </a>
         </div>
-//TODO: This
-        <Modal  show={showModal} onHide={() => setShowModal(false)}>
-          <Modal.Header closeButton>
+
+        <Modal
+          show={showModal}
+          onHide={() => setShowModal(false)}
+          dialogClassName="modal-150w"
+          centered
+        >
+          <Modal.Header className="bg-dark text-light" closeButton>
             <Modal.Title>Contact Me</Modal.Title>
           </Modal.Header>
-          <Modal.Body>
+          <Modal.Body className="bg-dark text-light  ">
             <Form>
               <Form.Group controlId="formBasicEmail">
                 <Form.Label>Email address</Form.Label>
                 <Form.Control type="email" placeholder="Enter email" />
                 <Form.Text className="text-muted">
-                  We'll never share your email with anyone else.
+                  I'll never share your email with anyone else.
                 </Form.Text>
               </Form.Group>
 
@@ -112,11 +91,8 @@ function About() {
               </Form.Group>
             </Form>
           </Modal.Body>
-          <Modal.Footer>
-            <Button variant="secondary" onClick={() => setShowModal(false)}>
-              Close
-            </Button>
-            <Button
+          <Modal.Footer className="bg-dark text-light">
+            <Button className="send-email-button"
               variant="primary"
               onClick={() => console.log("Send email!")}
             >

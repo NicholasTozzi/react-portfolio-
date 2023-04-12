@@ -1,0 +1,7 @@
+.portfolio {
+  filter: blur(6px);
+}
+
+.caption-container {
+   display: flex; 
+}
