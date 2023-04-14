@@ -4,22 +4,68 @@ import Carousel from "react-bootstrap/Carousel";
 import "../styles/Resume.css";
 import PortfolioPiece1 from "../../src/pictures/portfolio-pieces/flick-tracker.png";
 import PortfolioPiece2 from "../../src/pictures/portfolio-pieces/game-wiki.png";
+import { FaHtml5, FaCss3, FaJs, FaNodeJs } from "react-icons/fa";
+import { IoLogoNodejs } from "react-icons/io";
+import { SiNpm, SiMongodb, SiMysql, SiGraphql } from "react-icons/si";
+import { DiReact } from "react-icons/di";
+import { useState, useRef, useEffect } from "react";
 
 function Resume() {
-  return (
-    <div className="section row">
-      <div className="col col-md-5">
-        <h1 className="code"> <p className="this">this</p>.project</h1>
-        <h2>was built with</h2>
-        //TODO Create a state variable array to display icons of all tech skills you know
-      
-        
-        
-       
-      </div>
+  const [index, setIndex] = useState(0);
+  const intervalRef = useRef(null);
 
+  const icons = [
+    <FaHtml5 className="tech-icon" />,
+    <FaCss3 className="tech-icon" />,
+    <FaJs className="tech-icon" />,
+    <FaNodeJs className="tech-icon" />,
+    <SiMongodb className="tech-icon" />,
+    <SiNpm className="tech-icon" />,
+    <SiMysql className="tech-icon" />,
+    <SiGraphql className="tech-icon" />,
+    <DiReact className="tech-icon" />,
+  ];
+
+  useEffect(() => {
+    const animateCarousel = () => {
+      const nextIndex = index === icons.length - 1 ? 0 : index + 1;
+      setIndex(nextIndex);
+    };
+    intervalRef.current = setInterval(() => {
+      animateCarousel();
+    }, 3000);
+    return () => clearInterval(intervalRef.current);
+  }, [index]);
+
+  const handleSelect = (selectedIndex) => {
+    clearInterval(intervalRef.current);
+    setIndex(selectedIndex);
+  };
+
+  return (
+    <div className="section row" id="portfolio">
+      <div className="col col-md-5 col1">
+        <h1 className="code"> Check Out </h1>
+        <h1 className="code green-text">this.project</h1>
+        <h2 className="code">built with </h2>
+        <div className="tech">
+          <Carousel
+            className="tech-container"
+            activeIndex={index}
+            onSelect={handleSelect}
+            interval={null}
+            indicators={false}
+            controls={false}
+            wrap={false}
+          >
+            {icons.map((icon, idx) => (
+              <Carousel.Item key={idx}>{icon}</Carousel.Item>
+            ))}
+          </Carousel>
+        </div>
+      </div>
       <div className="col col-md-7">
-        <Carousel className="resume">
+        <Carousel className="resume" indicators={false}>
           <Carousel.Item>
             <a href="https://flick-tracker.herokuapp.com/">
               <img
@@ -28,10 +74,12 @@ function Resume() {
                 alt="Flick Tracker"
               />
             </a>
-            <Carousel.Caption className="caption-container">
-              <h3>Flick Tracker</h3>
-              <img src="{PortfolioPiece1}" />
-              <p>A MERN Movie App to track watched movies and your watchlist</p>
+            <Carousel.Caption className="portfolio-piece-context">
+              <h3 className="code portfolio-piece-title">Flick Tracker</h3>
+
+              <p className="code portfolio-piece-caption">
+                A MERN Movie App to track watched movies and your watchlist
+              </p>
             </Carousel.Caption>
           </Carousel.Item>
 
@@ -44,9 +92,11 @@ function Resume() {
               />
             </a>
 
-            <Carousel.Caption>
-              <h3>E-Commerce BackEnd Application</h3>
-              <p>A mySQL backend appplication for an ecommerce website.</p>
+            <Carousel.Caption className="portfolio-piece-context">
+              <h3 className="code portfolio-piece-title">E-Commerce</h3>
+              <p className="code portfolio-piece-caption">
+                A mySQL backend appplication for an ecommerce website.
+              </p>
             </Carousel.Caption>
           </Carousel.Item>
 
@@ -59,9 +109,11 @@ function Resume() {
               />
             </a>
 
-            <Carousel.Caption>
-              <h3>Game Wiki</h3>
-              <p>An application to find video games based on catagory.</p>
+            <Carousel.Caption className="portfolio-piece-context">
+              <h3 className="code portfolio-piece-title">Game Wiki</h3>
+              <p className="code portfolio-piece-caption">
+                An application to find video games based on catagory.
+              </p>
             </Carousel.Caption>
           </Carousel.Item>
         </Carousel>

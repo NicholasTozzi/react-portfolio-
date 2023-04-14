@@ -1,19 +1,64 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import "../styles/About.css";
 import Col from "react-bootstrap/Col";
 import Row from "react-bootstrap/Row";
-//TODO: add modal: https://react-bootstrap.github.io/components/modal/
 import Button from "react-bootstrap/Button";
 import Modal from "react-bootstrap/Modal";
 import Form from "react-bootstrap/Form";
-import { FaGithub } from "react-icons/fa";
-import { FaLinkedin } from "react-icons/fa";
-import { FaTwitter } from "react-icons/fa";
+import emailjs from "@emailjs/browser";
+import Alert from "react-bootstrap/Alert";
+
 import ProfilePicture from "../../src/pictures/me.jpg";
 
 function About() {
+  const form = useRef();
   const [name, setName] = useState("Nick");
   const [showModal, setShowModal] = useState(false);
+  const [showSuccessAlert, setShowSuccessAlert] = useState(false);
+  const [showAlert, setShowAlert] = useState(false);
+
+  const handleAlertClose = () => {
+    setShowAlert(false);
+    setShowSuccessAlert(false);
+  };
+
+  const handleEmail = (e) => {
+    e.preventDefault();
+    console.log(e);
+    emailjs
+      .sendForm(
+        "service_lh1bc5b",
+        "template_vn47gcq",
+        form.current,
+        "htcHqFhj78Zy2RcTK"
+      )
+      .then(
+        (result) => {
+          console.log(result.text);
+          setShowSuccessAlert(true);
+          setShowAlert(true);
+          setTimeout(() => {
+            setShowAlert(false);
+          }, 5000);
+        },
+        (error) => {
+          console.log(error.text);
+        }
+      );
+
+    setShowModal(false);
+    setTimeout(() => {
+      setShowAlert(false);
+    }, 5000);
+  };
+
+  useEffect(() => {
+    setShowAlert(true);
+    setTimeout(() => {
+      setShowAlert(false);
+    }, 5000);
+  }, []);
+
   useEffect(() => {
     const names = ["Nick", "Tozzi", "Seitan"];
     let index = 1;
@@ -25,8 +70,9 @@ function About() {
 
     return () => clearInterval(intervalId);
   }, []);
+
   return (
-    <Row className="row about-container">
+    <Row className="row about-container" id="about">
       <Col sm={5} className="left-col">
         <img className="ProfilePicture" alt="its me" src={ProfilePicture} />
       </Col>
@@ -54,17 +100,6 @@ function About() {
         >
           Hire Me
         </Button>
-        <div className="social-container">
-          <a href="https://twitter.com/SeitanETH">
-            <FaTwitter className="icon" />
-          </a>
-          <a href="https://twitter.com/SeitanETH">
-            <FaLinkedin className="icon" />
-          </a>
-          <a href="https://twitter.com/SeitanETH">
-            <FaGithub className="icon" />
-          </a>
-        </div>
 
         <Modal
           show={showModal}
@@ -76,10 +111,23 @@ function About() {
             <Modal.Title>Contact Me</Modal.Title>
           </Modal.Header>
           <Modal.Body className="bg-dark text-light  ">
-            <Form>
+            <Form ref={form}>
+              <Form.Group controlId="formBasicName">
+                <Form.Label>Name</Form.Label>
+                <Form.Control
+                  name="user_name"
+                  type="name"
+                  placeholder="Enter name"
+                />
+              </Form.Group>
               <Form.Group controlId="formBasicEmail">
+                {" "}
                 <Form.Label>Email address</Form.Label>
-                <Form.Control type="email" placeholder="Enter email" />
+                <Form.Control
+                  name="user_email"
+                  type="email"
+                  placeholder="Enter email"
+                />
                 <Form.Text className="text-muted">
                   I'll never share your email with anyone else.
                 </Form.Text>
@@ -87,19 +135,29 @@ function About() {
 
               <Form.Group controlId="formBasicMessage">
                 <Form.Label>Message</Form.Label>
-                <Form.Control as="textarea" rows={3} />
+                <Form.Control name="message" as="textarea" rows={3} />
               </Form.Group>
             </Form>
           </Modal.Body>
           <Modal.Footer className="bg-dark text-light">
-            <Button className="send-email-button"
-              variant="primary"
-              onClick={() => console.log("Send email!")}
-            >
+            <Button className="send-email-button" onClick={handleEmail}>
               Send Email
             </Button>
           </Modal.Footer>
         </Modal>
+        {showSuccessAlert && (
+          <Alert
+            variant="success"
+            onClose={handleAlertClose}
+            dismissible
+            className="my-alert"
+          >
+            <Alert.Heading>Success!</Alert.Heading>
+            <p className="alert-text">
+              Your message has been sent successfully.
+            </p>
+          </Alert>
+        )}
       </Col>
     </Row>
   );

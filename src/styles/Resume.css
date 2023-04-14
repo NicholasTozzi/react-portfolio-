@@ -3,19 +3,73 @@
 .portfolio {
   max-height: 800px;
   max-width: 100%;
-  filter: blur(10px);
+  filter: blur(20px);
+}
+
+.portfolio-piece-title {
+  font-size: 5em;
+}
+.portfolio-piece-caption {
+  font-size: 1.2em;
+}
+
+.portfolio-piece-context {
+  margin: auto;
+}
+
+.resume {
+  padding: 40px;
+}
+
+.col1 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.tech-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+.tech-container .tech-icon {
+  width: 150px;
+  height: auto;
+  margin: 20px;
 }
 
 .caption-container {
   display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.caption {
+  margin: 10px;
+  font-weight: bold;
+  font-size: 1.2rem;
+  text-align: center;
+  color: #444;
 }
 
 .section {
   background-color: #44715f;
+  color: #fff;
+  padding: 40px;
+}
+
+.section p {
+  margin-bottom: 20px;
+  line-height: 1.6;
 }
 
 h1.code {
-  font-size: em;
+  margin: 40px 0px;
 }
 
 .code {
@@ -26,6 +80,8 @@ p.code {
   font-size: 2em;
 }
 
-.this:hover {
+.green-text {
   color: #a9fdac;
 }
+
+

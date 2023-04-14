@@ -1,10 +1,32 @@
 .footer {
-  /* background: linear-gradient(
+  background: rgb(68, 113, 95);
+  background: linear-gradient(
     180deg,
-    rgba(68, 113, 95) 1%,
-    rgb(33, 37, 41, 1) 80%
-  ); */
+    rgb(68, 113, 95) 30%,
+    rgba(33, 37, 41, 1) 90%
+  );
+  padding-top: 20px;
+  display: flex;
+  flex-direction: column;
+}
 
-  margin-top: 0px;
-  margin-bottom: 0px;
+.social-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+}
+
+.social-container a {
+  margin-right: 10px;
+}
+
+svg.icon {
+  width: 80px;
+  margin: 40px 100px;
+}
+
+.copywrite {
+  text-align: center;
+  font-size: 1.5em;
 }
