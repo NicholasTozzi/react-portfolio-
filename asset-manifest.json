@@ -1,0 +1,19 @@
+{
+  "files": {
+    "main.css": "/react-portfolio-/static/css/main.53c7d390.css",
+    "main.js": "/react-portfolio-/static/js/main.ef618348.js",
+    "static/js/787.fb771931.chunk.js": "/react-portfolio-/static/js/787.fb771931.chunk.js",
+    "static/media/game-wiki.png": "/react-portfolio-/static/media/game-wiki.94a9c1685f61fa52f7cd.png",
+    "static/media/flick-tracker.png": "/react-portfolio-/static/media/flick-tracker.6d7a369de8b2a968efe0.png",
+    "static/media/me.jpg": "/react-portfolio-/static/media/me.d781750afb9e246f1686.jpg",
+    "static/media/logo.svg": "/react-portfolio-/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
+    "index.html": "/react-portfolio-/index.html",
+    "main.53c7d390.css.map": "/react-portfolio-/static/css/main.53c7d390.css.map",
+    "main.ef618348.js.map": "/react-portfolio-/static/js/main.ef618348.js.map",
+    "787.fb771931.chunk.js.map": "/react-portfolio-/static/js/787.fb771931.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.53c7d390.css",
+    "static/js/main.ef618348.js"
+  ]
+}
