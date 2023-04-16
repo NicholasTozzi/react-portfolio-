@@ -5,7 +5,6 @@ import "../styles/Resume.css";
 import PortfolioPiece1 from "../../src/pictures/portfolio-pieces/flick-tracker.png";
 import PortfolioPiece2 from "../../src/pictures/portfolio-pieces/game-wiki.png";
 import { FaHtml5, FaCss3, FaJs, FaNodeJs } from "react-icons/fa";
-import { IoLogoNodejs } from "react-icons/io";
 import { SiNpm, SiMongodb, SiMysql, SiGraphql } from "react-icons/si";
 import { DiReact } from "react-icons/di";
 import { useState, useRef, useEffect } from "react";
