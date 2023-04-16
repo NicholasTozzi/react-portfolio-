@@ -1,7 +1,7 @@
 {
   "name": "personal-portfolio",
   "version": "0.1.0",
-  "homepage": "NicholasTozzi.github.io",
+  "homepage": "https://NicholasTozzi.github.io/react-portfolio-",
   "private": true,
   "dependencies": {
     "@emailjs/browser": "^3.11.0",
