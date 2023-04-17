@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.css": "/nicktozzi.dev/static/css/main.53c7d390.css",
-    "main.js": "/nicktozzi.dev/static/js/main.b2d984e2.js",
-    "static/js/787.fb771931.chunk.js": "/nicktozzi.dev/static/js/787.fb771931.chunk.js",
-    "static/media/game-wiki.png": "/nicktozzi.dev/static/media/game-wiki.94a9c1685f61fa52f7cd.png",
-    "static/media/flick-tracker.png": "/nicktozzi.dev/static/media/flick-tracker.6d7a369de8b2a968efe0.png",
-    "static/media/me.jpg": "/nicktozzi.dev/static/media/me.d781750afb9e246f1686.jpg",
-    "static/media/logo.svg": "/nicktozzi.dev/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
-    "index.html": "/nicktozzi.dev/index.html",
-    "main.53c7d390.css.map": "/nicktozzi.dev/static/css/main.53c7d390.css.map",
-    "main.b2d984e2.js.map": "/nicktozzi.dev/static/js/main.b2d984e2.js.map",
-    "787.fb771931.chunk.js.map": "/nicktozzi.dev/static/js/787.fb771931.chunk.js.map"
+    "main.css": "/static/css/main.53c7d390.css",
+    "main.js": "/static/js/main.92fe63c1.js",
+    "static/js/787.fb771931.chunk.js": "/static/js/787.fb771931.chunk.js",
+    "static/media/game-wiki.png": "/static/media/game-wiki.94a9c1685f61fa52f7cd.png",
+    "static/media/flick-tracker.png": "/static/media/flick-tracker.6d7a369de8b2a968efe0.png",
+    "static/media/me.jpg": "/static/media/me.d781750afb9e246f1686.jpg",
+    "static/media/logo.svg": "/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
+    "index.html": "/index.html",
+    "main.53c7d390.css.map": "/static/css/main.53c7d390.css.map",
+    "main.92fe63c1.js.map": "/static/js/main.92fe63c1.js.map",
+    "787.fb771931.chunk.js.map": "/static/js/787.fb771931.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.53c7d390.css",
-    "static/js/main.b2d984e2.js"
+    "static/js/main.92fe63c1.js"
   ]
 }
